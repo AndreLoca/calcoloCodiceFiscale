@@ -1,0 +1,254 @@
+[
+  {
+    "Carattere": "0",
+    "ValorePari": 0,
+    "ValoreDispari": 1,
+    "Resto": 0,
+    "LetteraDiControllo": "A"
+  },
+  {
+    "Carattere": "1",
+    "ValorePari": 1,
+    "ValoreDispari": 0,
+    "Resto": 1,
+    "LetteraDiControllo": "B"
+  },
+  {
+    "Carattere": "2",
+    "ValorePari": 2,
+    "ValoreDispari": 5,
+    "Resto": 2,
+    "LetteraDiControllo": "C"
+  },
+  {
+    "Carattere": "3",
+    "ValorePari": 3,
+    "ValoreDispari": 7,
+    "Resto": 3,
+    "LetteraDiControllo": "D"
+  },
+  {
+    "Carattere": "4",
+    "ValorePari": 4,
+    "ValoreDispari": 9,
+    "Resto": 4,
+    "LetteraDiControllo": "E"
+  },
+  {
+    "Carattere": "5",
+    "ValorePari": 5,
+    "ValoreDispari": 13,
+    "Resto": 5,
+    "LetteraDiControllo": "F"
+  },
+  {
+    "Carattere": "6",
+    "ValorePari": 6,
+    "ValoreDispari": 15,
+    "Resto": 6,
+    "LetteraDiControllo": "G"
+  },
+  {
+    "Carattere": "7",
+    "ValorePari": 7,
+    "ValoreDispari": 17,
+    "Resto": 7,
+    "LetteraDiControllo": "H"
+  },
+  {
+    "Carattere": "8",
+    "ValorePari": 8,
+    "ValoreDispari": 19,
+    "Resto": 8,
+    "LetteraDiControllo": "I"
+  },
+  {
+    "Carattere": "9",
+    "ValorePari": 9,
+    "ValoreDispari": 21,
+    "Resto": 9,
+    "LetteraDiControllo": "J"
+  },
+  {
+    "Carattere": "A",
+    "ValorePari": 0,
+    "ValoreDispari": 1,
+    "Resto": 0,
+    "LetteraDiControllo": "A"
+  },
+  {
+    "Carattere": "B",
+    "ValorePari": 1,
+    "ValoreDispari": 0,
+    "Resto": 1,
+    "LetteraDiControllo": "B"
+  },
+  {
+    "Carattere": "C",
+    "ValorePari": 2,
+    "ValoreDispari": 5,
+    "Resto": 2,
+    "LetteraDiControllo": "C"
+  },
+  {
+    "Carattere": "D",
+    "ValorePari": 3,
+    "ValoreDispari": 7,
+    "Resto": 3,
+    "LetteraDiControllo": "D"
+  },
+  {
+    "Carattere": "E",
+    "ValorePari": 4,
+    "ValoreDispari": 9,
+    "Resto": 4,
+    "LetteraDiControllo": "E"
+  },
+  {
+    "Carattere": "F",
+    "ValorePari": 5,
+    "ValoreDispari": 13,
+    "Resto": 5,
+    "LetteraDiControllo": "F"
+  },
+  {
+    "Carattere": "G",
+    "ValorePari": 6,
+    "ValoreDispari": 15,
+    "Resto": 6,
+    "LetteraDiControllo": "G"
+  },
+  {
+    "Carattere": "H",
+    "ValorePari": 7,
+    "ValoreDispari": 17,
+    "Resto": 7,
+    "LetteraDiControllo": "H"
+  },
+  {
+    "Carattere": "I",
+    "ValorePari": 8,
+    "ValoreDispari": 19,
+    "Resto": 8,
+    "LetteraDiControllo": "I"
+  },
+  {
+    "Carattere": "J",
+    "ValorePari": 9,
+    "ValoreDispari": 21,
+    "Resto": 9,
+    "LetteraDiControllo": "J"
+  },
+  {
+    "Carattere": "K",
+    "ValorePari": 10,
+    "ValoreDispari": 2,
+    "Resto": 10,
+    "LetteraDiControllo": "K"
+  },
+  {
+    "Carattere": "L",
+    "ValorePari": 11,
+    "ValoreDispari": 4,
+    "Resto": 11,
+    "LetteraDiControllo": "L"
+  },
+  {
+    "Carattere": "M",
+    "ValorePari": 12,
+    "ValoreDispari": 18,
+    "Resto": 12,
+    "LetteraDiControllo": "M"
+  },
+  {
+    "Carattere": "N",
+    "ValorePari": 13,
+    "ValoreDispari": 20,
+    "Resto": 13,
+    "LetteraDiControllo": "N"
+  },
+  {
+    "Carattere": "O",
+    "ValorePari": 14,
+    "ValoreDispari": 11,
+    "Resto": 14,
+    "LetteraDiControllo": "O"
+  },
+  {
+    "Carattere": "P",
+    "ValorePari": 15,
+    "ValoreDispari": 3,
+    "Resto": 15,
+    "LetteraDiControllo": "P"
+  },
+  {
+    "Carattere": "Q",
+    "ValorePari": 16,
+    "ValoreDispari": 6,
+    "Resto": 16,
+    "LetteraDiControllo": "Q"
+  },
+  {
+    "Carattere": "R",
+    "ValorePari": 17,
+    "ValoreDispari": 8,
+    "Resto": 17,
+    "LetteraDiControllo": "R"
+  },
+  {
+    "Carattere": "S",
+    "ValorePari": 18,
+    "ValoreDispari": 12,
+    "Resto": 18,
+    "LetteraDiControllo": "S"
+  },
+  {
+    "Carattere": "T",
+    "ValorePari": 19,
+    "ValoreDispari": 14,
+    "Resto": 19,
+    "LetteraDiControllo": "T"
+  },
+  {
+    "Carattere": "U",
+    "ValorePari": 20,
+    "ValoreDispari": 16,
+    "Resto": 20,
+    "LetteraDiControllo": "U"
+  },
+  {
+    "Carattere": "V",
+    "ValorePari": 21,
+    "ValoreDispari": 10,
+    "Resto": 21,
+    "LetteraDiControllo": "V"
+  },
+  {
+    "Carattere": "W",
+    "ValorePari": 22,
+    "ValoreDispari": 22,
+    "Resto": 22,
+    "LetteraDiControllo": "W"
+  },
+  {
+    "Carattere": "X",
+    "ValorePari": 23,
+    "ValoreDispari": 25,
+    "Resto": 23,
+    "LetteraDiControllo": "X"
+  },
+  {
+    "Carattere": "Y",
+    "ValorePari": 24,
+    "ValoreDispari": 24,
+    "Resto": 24,
+    "LetteraDiControllo": "Y"
+  },
+  {
+    "Carattere": "Z",
+    "ValorePari": 25,
+    "ValoreDispari": 23,
+    "Resto": 25,
+    "LetteraDiControllo": "Z"
+  }
+]
