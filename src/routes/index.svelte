@@ -1,5 +1,7 @@
 <script>
 	import { writable } from 'svelte/store';
+	import { fade } from 'svelte/transition';
+
 	import listaComuni from '$lib/data/listaComuni.json';
 	import { codificaMesi } from '$lib/mesi';
 	import transcodifica from '$lib/data/transcodifica.json';
@@ -37,7 +39,8 @@
 
 	$: {
 		comuneNascita = comuneNascita.toUpperCase();
-		if (comuneNascita.length >= 3) {
+		if ($storeComuni.filter((comune) => comune.nome.startsWith(comuneNascita)).length < 5){
+		//if (comuneNascita.length >= 3) {
 			filtraComuni = $storeComuni.filter((comune) => comune.nome.startsWith(comuneNascita));
 		} else {
 			// ...prende tutti i valori di comuni e li mette nella lista filtraComuni
@@ -114,16 +117,18 @@
 </script>
 
 <div class="flex h-screen">
-	<div class="lg:mx-auto my-auto m-5">
-		<div class=" bg-gradient-to-r w-fit from-cyan-500 to-green-300 rounded-lg drop-shadow-2xl p-9 border-2 border-sky-900">
-			<div class="lg:text-4xl text-2xl text-sky-900 col-span-2 text-center px-6 py-6">
-				{cognomeCF}
-				{nomeCF}
-				{#if anno == undefined}XX{:else}{anno}{/if}
-				{#if mese == undefined}XX{:else}{mese}{/if}
-				{#if giorno == undefined}XX{:else}{giorno}{/if}
-				{#if codiceComune == ''}XXXX{:else}{codiceComune}{/if}
-				{#if letteraDiControllo == undefined}X{:else}{letteraDiControllo}{/if}
+	<div class="md:mx-auto my-auto m-5">
+		<div
+			class=" bg-gradient-to-r w-fit from-cyan-500 to-green-300 rounded-lg drop-shadow-2xl p-9 border-2 border-sky-900"
+		>
+			<div class="md:text-4xl text-2xl text-sky-900 col-span-2 text-center px-6 py-6">
+				<p>{cognomeCF}
+					{nomeCF}
+					{#if anno == undefined}XX{:else}{anno}{/if}
+					{#if mese == undefined}XX{:else}{mese}{/if}
+					{#if giorno == undefined}XX{:else}{giorno}{/if}
+					{#if codiceComune == ''}XXXX{:else}{codiceComune}{/if}
+					{#if letteraDiControllo == undefined}X{:else}{letteraDiControllo}{/if}</p>
 			</div>
 			<div>
 				<label for="cognome">Cognome </label><input
