@@ -47,9 +47,11 @@
 
 	let nomeCF = '';
 	$: {
-		let nomeNoSpazi = nome.replace(/^\s+|\s+$/gm, '');
-		let strNomVocali = nomeNoSpazi.replace(/[^aeiou]/gi, '');
-		let strNomConsonanti = nomeNoSpazi.replace(/[aeiou]/gi, '');
+		let strNomVocali = nome.replace(/[^aeiou]/gi, '').replace(/[^a-z]/gi, '');
+		let strNomConsonanti = nome.replace(/[aeiou]/gi, '').replace(/[^a-z]/gi, '');
+		console.log(strNomConsonanti);
+		console.log(strNomVocali);
+
 		if (strNomConsonanti.length <= 3) {
 			// se non ci sono abbastanza vocali metto le x
 			if (strNomVocali.length < 3) {
@@ -71,9 +73,8 @@
 
 	let cognomeCF = '';
 	$: {
-		let cognomeNoSpazi = cognome.replace(/^\s+|\s+$/gm, '');
-		let strCgnVocali = cognomeNoSpazi.replace(/[^aeiou]/gi, '');
-		let strCgnConsonanti = cognomeNoSpazi.replace(/[aeiou]/gi, '');
+		let strCgnVocali = cognome.replace(/[^aeiou]/gi, '').replace(/[^a-z]/gi, '');
+		let strCgnConsonanti = cognome.replace(/[aeiou]/gi, '').replace(/[^a-z]/gi, '');
 		if (strCgnConsonanti.length <= 3) {
 			// se non ci sono abbastanza vocali metto le x
 			if (strCgnVocali.length < 3) {
@@ -113,70 +114,70 @@
 </script>
 
 <div class="flex h-screen">
-	<div
-		class="my-auto mx-auto grid grid-cols-2 bg-gradient-to-r w-fit from-cyan-500 to-green-300 rounded-lg drop-shadow-2xl p-9"
-	>
-		<div class="text-4xl text-sky-900 col-span-2 text-center p-6">
-			{cognomeCF}
-			{nomeCF}
-			{#if anno == undefined}XX{:else}{anno}{/if}
-			{#if mese == undefined}XX{:else}{mese}{/if}
-			{#if giorno == undefined}XX{:else}{giorno}{/if}
-			{#if codiceComune == ''}XXXX{:else}{codiceComune}{/if}
-			{#if letteraDiControllo == undefined}X{:else}{letteraDiControllo}{/if}
-		</div>
-		<div>
-			<label for="cognome">Cognome </label><input
-				type="text"
-				id="cognome"
-				placeholder=" es. Rossi"
-				bind:value={cognome}
-				class="my-2 rounded"
-			/>
-		</div>
-		<div>
-			<label for="nome">Nome </label><input
-				type="text"
-				id="nome"
-				placeholder=" es. Luca"
-				bind:value={nome}
-				class="my-2 rounded"
-			/>
-		</div>
-		<div>
-			<div class="">
-				<label for="sesso">Sesso:</label>
-				<select name="sesso" bind:value={sesso} id="sesso" class="my-2 rounded">
-					<option value="m">M</option>
-					<option value="f">F</option>
-				</select>
+	<div class="lg:mx-auto my-auto m-5">
+		<div class=" bg-gradient-to-r w-fit from-cyan-500 to-green-300 rounded-lg drop-shadow-2xl p-9 border-2 border-sky-900">
+			<div class="lg:text-4xl text-2xl text-sky-900 col-span-2 text-center px-6 py-6">
+				{cognomeCF}
+				{nomeCF}
+				{#if anno == undefined}XX{:else}{anno}{/if}
+				{#if mese == undefined}XX{:else}{mese}{/if}
+				{#if giorno == undefined}XX{:else}{giorno}{/if}
+				{#if codiceComune == ''}XXXX{:else}{codiceComune}{/if}
+				{#if letteraDiControllo == undefined}X{:else}{letteraDiControllo}{/if}
 			</div>
-		</div>
-		<div>
-			<label for="conasc">Comune di nascita </label>
-			<input
-				type="text"
-				id="conasc"
-				placeholder=" es. Milano"
-				name="comuneNascita"
-				bind:value={comuneNascita}
-				list="listaComuni"
-				class="my-2 rounded"
-			/>
-			<datalist id="listaComuni">
-				{#each filtraComuni as { nome, provincia }}
-					<option value="{nome} ({provincia})">{nome} ({provincia})</option>
-				{/each}
-			</datalist>
-		</div>
-		<div>
-			<label for="data">Data di nascita </label><input
-				type="date"
-				id="data"
-				placeholder="Data di nascita"
-				bind:value={data}
-				class="my-2 rounded"
-			/>
+			<div>
+				<label for="cognome">Cognome </label><input
+					type="text"
+					id="cognome"
+					placeholder=" es. Rossi"
+					bind:value={cognome}
+					class="my-2 rounded"
+				/>
+			</div>
+			<div>
+				<label for="nome">Nome </label><input
+					type="text"
+					id="nome"
+					placeholder=" es. Luca"
+					bind:value={nome}
+					class="my-2 rounded"
+				/>
+			</div>
+			<div>
+				<div class="">
+					<label for="sesso">Sesso:</label>
+					<select name="sesso" bind:value={sesso} id="sesso" class="my-2 rounded">
+						<option value="m">M</option>
+						<option value="f">F</option>
+					</select>
+				</div>
+			</div>
+			<div>
+				<label for="conasc">Comune di nascita </label>
+				<input
+					type="text"
+					id="conasc"
+					placeholder=" es. Milano"
+					name="comuneNascita"
+					bind:value={comuneNascita}
+					list="listaComuni"
+					class="my-2 rounded"
+				/>
+				<datalist id="listaComuni">
+					{#each filtraComuni as { nome, provincia }}
+						<option value="{nome} ({provincia})">{nome} ({provincia})</option>
+					{/each}
+				</datalist>
+			</div>
+			<div>
+				<label for="data">Data di nascita </label><input
+					type="date"
+					id="data"
+					placeholder="Data di nascita"
+					bind:value={data}
+					class="my-2 rounded"
+				/>
+			</div>
 		</div>
 	</div>
 </div>
